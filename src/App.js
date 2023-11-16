@@ -4,11 +4,11 @@ import Home from "./pages/home/Home";
 import Gallery from "./pages/gallery/Gallery";
 import { createContext, useState } from "react";
 
-const AppContext = createContext(null);
+export const AppContext = createContext(null);
 function App() {
-  const [isLogin, setIsogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
   return (
-    <AppContext.Provider value={{ isLogin }}>
+    <AppContext.Provider value={{ isLogin, setIsLogin }}>
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />

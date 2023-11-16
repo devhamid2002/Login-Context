@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AppContext } from "../../App";
 function Header() {
+  const { isLogin, setIsLogin } = useContext(AppContext);
   return (
     <>
       <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -9,7 +11,7 @@ function Header() {
             SAYNO
           </span>
           <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            {false ? (
+            {isLogin ? (
               <span className="text-black  font-medium rounded-lg text-sm px-4 py-2 text-center dark:text-white">
                 HamidReza Yavarzadeh
               </span>
@@ -69,12 +71,12 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="#"
+                <p
+                  onClick={() => setIsLogin(false)}
                   class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 d:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Logout
-                </Link>
+                </p>
               </li>
             </ul>
           </div>

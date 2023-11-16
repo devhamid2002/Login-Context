@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../../components/header/Header";
 import Picture from "../../components/Picture/Picture";
+import { AppContext } from "../../App";
 
 function Gallery() {
+  const { isLogin } = useContext(AppContext);
   return (
     <>
       <Header />
-      {true ? (
+      {isLogin ? (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 mt-8 mx-auto">
           <Picture />
           <Picture />
@@ -18,7 +20,7 @@ function Gallery() {
           <Picture />
         </div>
       ) : (
-        <p className="mt-[25%]">You must log in</p>
+        <p className="mt-[25%]">You must login</p>
       )}
     </>
   );

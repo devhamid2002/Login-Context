@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.970afdf2.css",
+    "main.js": "/static/js/main.1428625a.js",
+    "static/js/787.7f7dca02.chunk.js": "/static/js/787.7f7dca02.chunk.js",
+    "static/media/valorant.jpg": "/static/media/valorant.bced9da7db0221b9e935.jpg",
+    "index.html": "/index.html",
+    "main.970afdf2.css.map": "/static/css/main.970afdf2.css.map",
+    "main.1428625a.js.map": "/static/js/main.1428625a.js.map",
+    "787.7f7dca02.chunk.js.map": "/static/js/787.7f7dca02.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.970afdf2.css",
+    "static/js/main.1428625a.js"
+  ]
+}
